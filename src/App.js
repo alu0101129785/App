@@ -5,7 +5,7 @@ import "./index.css"; // Asegúrate de que este archivo CSS exista
 export default function App() {
   const [showGreeting, setShowGreeting] = useState(false);
   const [pressCount, setPressCount] = useState(0);
-  const [buttonPosition, setButtonPosition] = useState({ top: 100, left: 0 });
+  const [buttonPosition, setButtonPosition] = useState({ top: 100});
 
   // Obtener el tamaño de la pantalla
   const { innerWidth: width, innerHeight: height } = window;
@@ -17,7 +17,6 @@ export default function App() {
 
       setButtonPosition({
         top: Math.random() * (height - buttonHeight),
-        left: (width - buttonWidth) / 2,
       });
 
       setPressCount(pressCount + 1);
@@ -51,7 +50,8 @@ export default function App() {
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ type: "timing", duration: 0.7 }}
-          style={{ position: "absolute", top: buttonPosition.top, left: buttonPosition.left }}
+          style={{ position: "absolute", top: buttonPosition.top
+           }}
         >
           <button onClick={handleButtonPress} className="buttonTouchable">
             <span className="buttonText">{getButtonText()}</span>
@@ -76,7 +76,7 @@ export default function App() {
             className="card"
           >
             {/* Imagen de la carpeta public */}
-            <img src="/mar.jpg" alt="Imagen de cumpleaños" className="image" />
+            <img src={`${process.env.PUBLIC_URL}/mar.jpg`} alt="Imagen de cumpleaños" className="image" />
             <span className="text">Para la cachorrita con la sonrisa más bonita del mundo.</span>
             <span className="text2">Feliz Cumpleaños</span>
             <span className="text2">Marsssiiitaaaaa 🎂👩‍✈️☁️</span>
