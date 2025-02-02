@@ -1,0 +1,100 @@
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f4f6;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.buttonTouchable {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #0288d1;
+  cursor: pointer;
+  border: none;
+}
+
+.buttonText {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  padding: 0;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 90%;
+  max-width: 350px;  /* Limita el ancho máximo de la tarjeta */
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+  overflow: hidden;  /* Asegura que el contenido no se salga */
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  object-fit: cover;  /* Asegura que la imagen se recorte correctamente */
+}
+
+.text {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  color: #0288d1;
+  margin-bottom: 15px;
+}
+
+.text2 {
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+  color: #0288d1;
+  margin-bottom: 10px;
+}
+
+.backButton {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ff4081;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.backButtonText {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.counterText {
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  top: 50px;
+  color: black;
+}
